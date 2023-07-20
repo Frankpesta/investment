@@ -1,16 +1,38 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import auth from '../../assets/auth.png';
+import auth from "../../assets/auth.png";
+import { useDispatch } from "react-redux";
+import { login, reset } from "../../app/services/auth/authSplice";
+import { useCustomToast } from "../../utils/toast";
+import { routeObj } from "../../constants/routes";
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch();
+  const { notifyError, notifySuccess } = useCustomToast();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  }
+    const data = { email: email, password: password };
+    dispatch(login(data)).then((result) => {
+      console.log(result);
+
+      if (result.meta.requestStatus === "rejected") {
+        notifyError(result.payload);
+      }
+      if (result.meta.requestStatus === "fulfilled") {
+        notifySuccess("User Logged in Successfully");
+        const url = routeObj.home;
+        navigate(url);
+        dispatch(reset());
+        setEmail("");
+        setPassword("");
+      }
+    });
+  };
 
   return (
     <section className="mx-0 lg:mx-4 my-4">
@@ -32,7 +54,7 @@ const Login = () => {
             <p className="mt-2 text-base text-gray-600">
               Don’t have an account?{" "}
               <Link
-                to='/auth/register'
+                to="/auth/register"
                 className="font-medium text-green-600 transition-all duration-200 hover:text-green-700 focus:text-green-700 hover:underline"
               >
                 Register here
@@ -42,7 +64,7 @@ const Login = () => {
               <div className="space-y-5">
                 <div>
                   <label
-                    htmlFor='Email'
+                    htmlFor="Email"
                     className="text-base font-medium text-gray-900"
                   >
                     {" "}
@@ -78,7 +100,7 @@ const Login = () => {
                 <div>
                   <div className="flex items-center justify-between">
                     <label
-                      htmlFor='password'
+                      htmlFor="password"
                       className="text-base font-medium text-gray-900"
                     >
                       {" "}

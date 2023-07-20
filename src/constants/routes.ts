@@ -15,6 +15,7 @@ import Referral from "../Pages/AuthPages/Referral";
 import EditProfile from "../Pages/AuthPages/EditProfile";
 import Login from "../Pages/AuthPages/Login";
 import Register from "../Pages/AuthPages/Register";
+import UsersProfit from "../Pages/AuthPages/UsersProfit";
 export const routeObj = {
   login: "/auth/login",
   register: "/auth/register",
@@ -40,6 +41,7 @@ export const routeObj = {
   allrequests: "/all-requests",
   allwithdrawals: "/all-withdrawals",
   address: "/address",
+  usersprofit: "/users-profit/",
   // verifyemail: "/auth/verify-email",
 };
 
@@ -100,6 +102,10 @@ export const protectedRoutes = [
     path: `${routeObj.address}`,
     component: Address,
   },
+  {
+    path: `${routeObj.usersprofit}:code`,
+    component: UsersProfit,
+  },
 ];
 
 // export const homeRoute = [
@@ -130,15 +136,15 @@ export const authRoute = [
   //     path: routeObj.services,
   //     component: Services,
   //   },
-    {
-      path: routeObj.register,
-      component: Register,
-    },
+  {
+    path: routeObj.register,
+    component: Register,
+  },
 
-    {
-      path: routeObj.login,
-      component: Login,
-    },
+  {
+    path: routeObj.login,
+    component: Login,
+  },
   //   {
   //     path: routeObj.packages,
   //     component: Packages,

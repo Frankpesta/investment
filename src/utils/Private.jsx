@@ -14,7 +14,7 @@ export const ProtectedRoute = () => {
 
 export const NoAccessRoute = () => {
   let token = localStorage.getItem("userInfo");
-  console.log(token);
+  // console.log(token);
 
   return token === null ? <Outlet /> : <Navigate to={"/dashboard"} />;
 };

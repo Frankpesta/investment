@@ -7,8 +7,9 @@ export const login = createAsyncThunk(
     try {
       const Response = await config.post("auth/sign-in", user);
       const userInfo = Response.data;
+      console.log(userInfo);
       localStorage.setItem("userInfo", JSON.stringify(userInfo));
-      return Response;
+      return Response.data;
     } catch (error) {
       const message =
         (error.response &&
@@ -31,8 +32,8 @@ export const Registeration = createAsyncThunk(
       const userInfo = Response.data.auth;
       console.log(userInfo);
 
-      localStorage.setItem("userInfo", JSON.stringify(userInfo));
-      return Response;
+      // localStorage.setItem("userInfo", JSON.stringify(userInfo));
+      // return Response;
     } catch (error) {
       const message =
         (error.response &&
@@ -106,7 +107,8 @@ const AuthSlice = createSlice({
       .addCase(login.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        state.user?.push(action?.payload);
+        // console.log(action?.payload);
+        state.user = action.payload;
       })
       .addCase(login.rejected, (state, action) => {
         state.isLoading = false;

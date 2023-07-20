@@ -18,6 +18,7 @@ import { useState } from "react";
 import { useCustomToast } from "../../utils/toast";
 import axios from "axios";
 import { useDispatch } from "react-redux";
+import { Deposit } from "../../app/services/auth/depositSlice";
 // import { Deposit } from "../../app/services/auth/depositSlice";
 
 // type Doingek = {
@@ -39,6 +40,7 @@ export default function AddNewUser(props) {
   const initialValues = { amount: "" };
   const { notifyError, notifySuccess } = useCustomToast();
   const dispatch = useDispatch();
+  // console.log(import.meta.env.VITE_UPLOAD_PRESET);
 
   // console.log(select);
 
@@ -236,34 +238,20 @@ export default function AddNewUser(props) {
                     </FormHelperText>
                     <Text py={"5px"}>{/* <b>Wallet Address:</b> */}</Text>
 
-                    <Formik
-                      initialValues={initialValues}
-                      enableReinitialize={true}
-                      onSubmit={async (values) => {}}
-                    >
-                      {(prop) => (
-                        <form onSubmit={prop.handleSubmit}>
-                          <Input
-                            variant="unstyled"
-                            placeholder="Instructors Name"
-                            color="font.dark"
-                            fontWeight="500"
-                            value={
-                              "sahbabas"
-                              // props.network === "Bitcoin"
-                              //   ? props?.data?.btc
-                              //   : props.network === "Ethereum"
-                              //   ? props?.data?.ethereum
-                              //   : props.network === "xrp"
-                              //   ? props?.data?.xrp
-                              //   : props.network === "usdt"
-                              //   ? props?.data?.usdt
-                              //   : ""
-                            }
-                          />
-                        </form>
-                      )}
-                    </Formik>
+                    <Text>
+                      {
+                        "sahbabas"
+                        // props.network === "Bitcoin"
+                        //   ? props?.data?.btc
+                        //   : props.network === "Ethereum"
+                        //   ? props?.data?.ethereum
+                        //   : props.network === "xrp"
+                        //   ? props?.data?.xrp
+                        //   : props.network === "usdt"
+                        //   ? props?.data?.usdt
+                        //   : ""
+                      }
+                    </Text>
                   </FormControl>
                 </Flex>
                 <Flex
@@ -310,7 +298,7 @@ export default function AddNewUser(props) {
                   initialValues={initialValues}
                   onSubmit={async (values) => {
                     async function init() {
-                      // console.log(select);
+                      // console.log(select, values);
                       if (!select) {
                         notifyError("No Image Was Selected");
                       }
@@ -319,12 +307,12 @@ export default function AddNewUser(props) {
                         formData.append("file", select);
                         formData.append(
                           "upload_preset",
-                          `${process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET}`
+                          `${import.meta.env.VITE_UPLOAD_PRESET}`
                         );
 
                         await axios
                           .post(
-                            `${process.env.REACT_APP_CLOUDINARY_URL}`,
+                            `${import.meta.env.VITE_CLOUDINARY_URL}`,
                             formData
                           )
                           .then((response) => {
@@ -338,14 +326,15 @@ export default function AddNewUser(props) {
                             return body;
                           })
                           .then((result) => {
-                            // dispatch(Deposit(result)).then((result) => {
-                            //   if (result.meta.requestStatus === "fulfilled") {
-                            //     notifySuccess(result.payload);
-                            //   }
-                            //   if (result.meta.requestStatus === "rejected") {
-                            //     notifyError(result.payload);
-                            //   }
-                            // });
+                            dispatch(Deposit(result)).then((result) => {
+                              if (result.meta.requestStatus === "fulfilled") {
+                                notifySuccess(result.payload);
+                                setSelected("");
+                              }
+                              if (result.meta.requestStatus === "rejected") {
+                                notifyError(result.payload);
+                              }
+                            });
                             props.onClose();
                           });
                       }
