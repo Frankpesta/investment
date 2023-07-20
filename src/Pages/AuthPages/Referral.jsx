@@ -11,7 +11,7 @@ import {
   Tr,
 } from "@chakra-ui/react";
 import Layout from "../../layouts/Layout";
-// import { ReferralCall } from "../../app/services/auth/notification";
+import { ReferralCall } from "../../app/services/auth/notification";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FormattedTime } from "../../utils/moment";
@@ -19,26 +19,26 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function Referral() {
   const dispatch = useDispatch();
-  // const { refrrral } = useSelector((state) => state.Reducers.notify);
+  const { refrrral } = useSelector((state) => state.notify);
 
   const [AllDeposit, setAllDeposits] = useState([]);
-  // console.log(refrrral?.referredBy);
+  // console.log(refrrral);
 
-  // useEffect(() => {
-  //   if (refrrral) {
-  //     const codelandcsSt = async () => {
-  //       setAllDeposits(refrrral.referredWho!);
-  //     };
-  //     codelandcsSt();
-  //   }
-  // }, [refrrral]);
+  useEffect(() => {
+    if (refrrral) {
+      const codelandcsSt = async () => {
+        setAllDeposits(refrrral.referredWho);
+      };
+      codelandcsSt();
+    }
+  }, [refrrral]);
 
-  // useEffect(() => {
-  //   async function init() {
-  //     await dispatch(ReferralCall());
-  //   }
-  //   init();
-  // }, [dispatch]);
+  useEffect(() => {
+    async function init() {
+      await dispatch(ReferralCall());
+    }
+    init();
+  }, [dispatch]);
 
   return (
     <Layout>
@@ -64,8 +64,8 @@ export default function Referral() {
           >
             <Text fontSize={"14px"}> Referral Link :</Text>
             <Text fontSize={"14px"} ml="5px">
-              {"No referral Link"}
-              {/* {refrrral ? refrrral.link : "No referral Link"} */}
+              {/* {"No referral Link"} */}
+              {refrrral ? refrrral.link : "No referral Link"}
             </Text>
           </Flex>
         </Flex>
@@ -138,11 +138,11 @@ export default function Referral() {
                       <Td mt={""}>
                         <Link to={`${""}`}>
                           <Text as={"span"} bg="" h={"100%"}>
-                            {/* {students.id} */}
+                            {students.id}
                           </Text>
                         </Link>
                       </Td>
-                      <Td>{/* {students.current} */}</Td>
+                      <Td>{students.current}</Td>
                       <Td>
                         <Flex align={"center"}>
                           <Text
@@ -152,7 +152,7 @@ export default function Referral() {
                             textAlign="center"
                             fontSize={{ base: "15px", md: "15px" }}
                           >
-                            {/* {FormattedTime(students.withdrawalTot!)} */}
+                            {FormattedTime(students.withdrawalTot)}
                           </Text>
                         </Flex>
                       </Td>

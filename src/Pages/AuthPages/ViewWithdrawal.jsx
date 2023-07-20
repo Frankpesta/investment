@@ -14,33 +14,31 @@ import {
 } from "@chakra-ui/react";
 import Layout from "../../layouts/Layout";
 import { Link } from "react-router-dom";
-// import { GetWithData } from "../../app/services/auth/depositSlice";
+import { GetWithData } from "../../app/services/auth/depositSlice";
 import { FormattedTime } from "../../utils/moment";
 import { useDispatch, useSelector } from "react-redux";
-// import { GetWithDData } from "../../app/services/response";
 
 export default function ViewWithdrawal() {
   const [AllDeposit, setAllDeposits] = useState([]);
   const dispatch = useDispatch();
-  // const { isLoading, getwith } = useSelector(
-  //   (state) => state.Reducers.deposit
-  // );
+  const { isLoading, getwith } = useSelector((state) => state.depositReducer);
+  // console.log();
 
-  // useEffect(() => {
-  //   if (getwith) {
-  //     const codelandcsSt = async () => {
-  //       setAllDeposits(getwith!);
-  //     };
-  //     codelandcsSt();
-  //   }
-  // }, [getwith]);
+  useEffect(() => {
+    if (getwith) {
+      const codelandcsSt = async () => {
+        setAllDeposits(getwith);
+      };
+      codelandcsSt();
+    }
+  }, [getwith]);
 
-  // useEffect(() => {
-  //   async function init() {
-  //     await dispatch(GetWithData());
-  //   }
-  //   init();
-  // }, [dispatch]);
+  useEffect(() => {
+    async function init() {
+      await dispatch(GetWithData());
+    }
+    init();
+  }, [dispatch]);
 
   return (
     <Layout>
@@ -71,92 +69,89 @@ export default function ViewWithdrawal() {
           </Flex>
         </Flex>
         <Flex w={"96%"} m={"auto"} py="0px" flexDirection="column" mb={"50px"}>
-          {/* <Skeleton isLoaded={!isLoading}> */}
-          <Flex
-            w={"96%"}
-            minH="300px"
-            m={"auto"}
-            py="0px"
-            flexDirection="column"
-          >
-            <TableContainer>
-              <>
-                <Table variant="">
-                  <Thead bg={"bg.background"} h="60px">
-                    <Tr>
-                      <Th display={{ base: "none", md: "table-cell" }}>
-                        <Flex align={"center"}>Withdrawal ID</Flex>
-                      </Th>
-                      <Th>
-                        <Flex align={"center"}>Amount</Flex>
-                      </Th>
-                      <Th>
-                        <Flex align={"center"}>Status</Flex>
-                      </Th>
-                      <Th>
-                        <Flex align={"center"}>Date Withdrawn</Flex>
-                      </Th>
-                    </Tr>
-                  </Thead>
-                  {AllDeposit && AllDeposit.length !== 0 ? (
-                    <Tbody>
-                      {AllDeposit?.map((students) => (
-                        <Tr
-                          // key={students.id}
-                          cursor="pointer"
-                        >
-                          <Td
-                            mt={""}
-                            display={{ base: "none", md: "table-cell" }}
-                          >
-                            <Link to={`${""}`}>
-                              <Text as={"span"} bg="" h={"100%"}>
-                                {/* {students.id} */}
-                              </Text>
-                            </Link>
-                          </Td>
-                          <Td>{/* ${students.profit} */}</Td>
-                          <Td>{/* {students.status} */}</Td>
-                          <Td>
-                            <Flex align={"center"}>
-                              <Text
-                                w={{ base: "90%", md: "60%" }}
-                                py={"5px"}
-                                // px={"10px"}
-                                textAlign="center"
-                                fontSize={{ base: "15px", md: "15px" }}
-                              >
-                                {/* {FormattedTime(students.created_at!)} */}
-                              </Text>
-                            </Flex>
-                          </Td>
-                        </Tr>
-                      ))}
-                    </Tbody>
-                  ) : (
-                    <></>
-                  )}
-                </Table>
-              </>
-              <Flex
-                p={"40px"}
-                bg="teal.900"
-                justify={"center"}
-                align="center"
-                mt="20px"
-                style={
-                  AllDeposit?.length === 0
-                    ? { display: "flex" }
-                    : { display: "none" }
-                }
-              >
-                <Text fontSize={"25px"} color="white" fontWeight={"700"}>
-                  No Payout Have Been Made To You
-                </Text>
-              </Flex>
-            </TableContainer>
-          </Flex>
-          {/* </Skeleton> */}
+          <Skeleton isLoaded={!isLoading}>
+            <Flex
+              w={"96%"}
+              minH="300px"
+              m={"auto"}
+              py="0px"
+              flexDirection="column"
+            >
+              <TableContainer>
+                <>
+                  <Table variant="">
+                    <Thead bg={"bg.background"} h="60px">
+                      <Tr>
+                        <Th display={{ base: "none", md: "table-cell" }}>
+                          <Flex align={"center"}>Withdrawal ID</Flex>
+                        </Th>
+                        <Th>
+                          <Flex align={"center"}>Amount</Flex>
+                        </Th>
+                        <Th>
+                          <Flex align={"center"}>Status</Flex>
+                        </Th>
+                        <Th>
+                          <Flex align={"center"}>Date Withdrawn</Flex>
+                        </Th>
+                      </Tr>
+                    </Thead>
+                    {AllDeposit && AllDeposit.length !== 0 ? (
+                      <Tbody>
+                        {AllDeposit?.map((students) => (
+                          <Tr key={students.id} cursor="pointer">
+                            <Td
+                              mt={""}
+                              display={{ base: "none", md: "table-cell" }}
+                            >
+                              <Link to={`${""}`}>
+                                <Text as={"span"} bg="" h={"100%"}>
+                                  {students.id}
+                                </Text>
+                              </Link>
+                            </Td>
+                            <Td>${students.profit}</Td>
+                            <Td>{students.status}</Td>
+                            <Td>
+                              <Flex align={"center"}>
+                                <Text
+                                  w={{ base: "90%", md: "60%" }}
+                                  py={"5px"}
+                                  // px={"10px"}
+                                  textAlign="center"
+                                  fontSize={{ base: "15px", md: "15px" }}
+                                >
+                                  {FormattedTime(students.created_at)}
+                                </Text>
+                              </Flex>
+                            </Td>
+                          </Tr>
+                        ))}
+                      </Tbody>
+                    ) : (
+                      <></>
+                    )}
+                  </Table>
+                </>
+                <Flex
+                  p={"40px"}
+                  bg="teal.900"
+                  justify={"center"}
+                  align="center"
+                  mt="20px"
+                  style={
+                    AllDeposit?.length === 0
+                      ? { display: "flex" }
+                      : { display: "none" }
+                  }
+                >
+                  <Text fontSize={"25px"} color="white" fontWeight={"700"}>
+                    No Payout Have Been Made To You
+                  </Text>
+                </Flex>
+              </TableContainer>
+            </Flex>
+          </Skeleton>
         </Flex>
       </Box>
     </Layout>

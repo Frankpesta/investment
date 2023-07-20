@@ -10,6 +10,7 @@ import { Provider } from "react-redux";
 import { protectedRoutes, authRoute } from "./constants/routes";
 import theme from "./utils/style";
 import { store } from "./app/store";
+import { ProtectedRoute, NoAccessRoute } from "./utils/Private";
 
 const App = () => {
   return (
@@ -19,7 +20,7 @@ const App = () => {
         <Router>
           <Routes>
             <Route path={"/"} element={<Navigate to={"/home"} />} />
-            <Route>
+            <Route element={<NoAccessRoute />}>
               {authRoute.map((route) => (
                 <Route
                   key={route.path}
@@ -29,7 +30,7 @@ const App = () => {
               ))}
             </Route>
 
-            <Route>
+            <Route element={<ProtectedRoute />}>
               {protectedRoutes.map((route) => (
                 <Route
                   key={route.path}

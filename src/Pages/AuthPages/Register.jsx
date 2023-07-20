@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { CountryDropdown } from "react-country-region-selector";
-import auth from '../../assets/auth.png'
+import auth from "../../assets/auth.png";
+import { Registeration, reset } from "../../app/services/auth/authSplice";
+import { useCustomToast } from "../../utils/toast";
+import { useDispatch } from "react-redux";
+import { routeObj } from "../../constants/routes";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -13,15 +17,40 @@ const Register = () => {
   const [isChecked, setIsChecked] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  const { notifyError, notifySuccess } = useCustomToast();
+  const dispatch = useDispatch();
 
-  
   const checkHandler = () => {
-    setIsChecked(!isChecked)
-  }
+    setIsChecked(!isChecked);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(country);
+    const data = {
+      email: email,
+      password: password,
+      fullname: name,
+      phone: phone,
+      username: username,
+      country: country,
+    };
+    // console.log(data);
+    dispatch(Registeration(data)).then((result) => {
+      // console.log(result);
+      if (result.meta.requestStatus === "fulfilled") {
+        notifySuccess("Registeration Successful");
+        setEmail("");
+        setPassword("");
+        setCountry("");
+        setName("");
+        setPhone("");
+        setUsername("");
+        navigate(routeObj.login);
+      }
+      if (result.meta.requestStatus === "rejected") {
+        notifyError(result.payload);
+      }
+    });
   };
 
   return (
@@ -222,8 +251,18 @@ const Register = () => {
                   </div>
                 </div>
                 <div className="flex gap-3">
-                  <input type="checkbox" id="checkbox" checked={isChecked} onChange={checkHandler} />
-                  <label htmlFor="checkbox" className="text-teal-700 text-base font-medium">I've Read and Agreed to the Terms of Service </label>
+                  <input
+                    type="checkbox"
+                    id="checkbox"
+                    checked={isChecked}
+                    onChange={checkHandler}
+                  />
+                  <label
+                    htmlFor="checkbox"
+                    className="text-teal-700 text-base font-medium"
+                  >
+                    I've Read and Agreed to the Terms of Service{" "}
+                  </label>
                 </div>
                 <div>
                   <button

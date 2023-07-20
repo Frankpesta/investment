@@ -9,7 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Layout from "../../layouts/Layout";
-// import { GetCrypto, UpdateCoin } from "../../app/services/auth/crypto";
+import { GetCrypto, UpdateCoin } from "../../app/services/auth/crypto";
 import { useCustomToast } from "../../utils/toast";
 import { Formik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
@@ -17,17 +17,17 @@ import { useDispatch, useSelector } from "react-redux";
 export default function Address() {
   const { notifyError, notifySuccess } = useCustomToast();
 
-  // const { blog } = useSelector((state) => state.Reducers.crypto);
+  const { blog } = useSelector((state) => state.crypto);
   const dispatch = useDispatch();
-  // let id = blog ? blog.id : "";
+  let id = blog ? blog.id : "";
   // console.log(blog);
 
-  // useEffect(() => {
-  //   async function init() {
-  //     await dispatch(GetCrypto());
-  //   }
-  //   init();
-  // }, [dispatch]);
+  useEffect(() => {
+    async function init() {
+      await dispatch(GetCrypto());
+    }
+    init();
+  }, [dispatch]);
 
   // type Doingek = {
   //   btc: string;
@@ -37,14 +37,10 @@ export default function Address() {
   // };
 
   const initialValues = {
-    // btc: blog ? blog.btc : "",
-    // ethereum: blog ? blog.ethereum : "",
-    // usdt: blog ? blog.usdt : "",
-    // xrp: blog ? blog.xrp : "",
-    btc: "",
-    ethereum: "",
-    usdt: "",
-    xrp: "",
+    btc: blog ? blog.btc : "",
+    ethereum: blog ? blog.ethereum : "",
+    usdt: blog ? blog.usdt : "",
+    xrp: blog ? blog.xrp : "",
   };
 
   const inputFontSize = { base: "16px", md: "1.2rem" };
@@ -72,22 +68,22 @@ export default function Address() {
             initialValues={initialValues}
             enableReinitialize={true}
             onSubmit={async (values) => {
-              // const body = { values, id };
-              console.log(values);
-              // await dispatch(UpdateCoin(body))
-              //   .then((result) => {
-              //     if (result.meta.requestStatus === "fulfilled") {
-              //       notifySuccess(result.payload);
-              //       dispatch(GetCrypto());
-              //     }
+              const body = { values, id };
+              // console.log(values);
+              await dispatch(UpdateCoin(body))
+                .then((result) => {
+                  if (result.meta.requestStatus === "fulfilled") {
+                    notifySuccess(result.payload);
+                    dispatch(GetCrypto());
+                  }
 
-              //     if (result.meta.requestStatus === "rejected") {
-              //       notifyError(result.payload);
-              //     }
-              //   })
-              //   .catch((error) => {
-              //     notifyError(error);
-              //   });
+                  if (result.meta.requestStatus === "rejected") {
+                    notifyError(result.payload);
+                  }
+                })
+                .catch((error) => {
+                  notifyError(error);
+                });
             }}
           >
             {(prop) => (

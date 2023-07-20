@@ -18,8 +18,8 @@ instance.interceptors.request.use((request) => {
   if (cookie) {
     const user = JSON.parse(cookie);
 
-    const token = user.token.access_token;
-    // console.log(token);
+    // console.log(user?.auth?.access_token);
+    const token = user?.auth?.access_token;
     // console.log(import.meta.env.VITE_LOCAL_API);
 
     request.headers.Authorization = token ? `Bearer ${token}` : undefined;

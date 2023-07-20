@@ -36,7 +36,7 @@ import { routeObj } from "../constants/routes";
 // import { routeObj } from "../../constants/routes";
 // import { customStyle } from "../../utils/style";
 // import NotificationModal from "../../Component/modal/NotificationMoadal";
-// import { logout } from "../../app/services/auth/authSplice";
+import { logout } from "../app/services/auth/authSplice";
 // import { useAppDispatch, useAppSelector } from "../../app/services/hooks";
 // import { notification } from "../../app/services/auth/notification";
 // import { LectureQuery, notifyDataDetails } from "../../app/services/type";
@@ -115,11 +115,11 @@ const SidebarContent = ({ onClose, ...rest }) => {
   const pathName = useLocation().pathname;
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const onlogout = () => {
-  //   dispatch(logout());
-  //   navigate(routeObj.login);
-  //   window.location.reload();
-  // };
+  const onlogout = () => {
+    dispatch(logout());
+    navigate(routeObj.login);
+    window.location.reload();
+  };
   const vv = localStorage.getItem("userInfo");
   let typewq;
   if (vv) {
@@ -237,7 +237,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
         </>
       ) : (
         <>
-          {LinkItems.map((link) => (
+          {AdminLinkItems.map((link) => (
             <NavItem
               key={link.name}
               bg={pathName.includes(link.url) ? "teal.900" : "none"}
@@ -269,7 +269,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
           color: "white",
         }}
         transition="0.6s"
-        // onClick={onlogout}
+        onClick={onlogout}
       >
         <Icon
           fontSize="24px"
