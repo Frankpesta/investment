@@ -13,9 +13,11 @@ import ViewDeposit from "../Pages/AuthPages/ViewDeposit";
 import ViewWithdrawal from "../Pages/AuthPages/ViewWithdrawal";
 import Referral from "../Pages/AuthPages/Referral";
 import EditProfile from "../Pages/AuthPages/EditProfile";
+import Login from "../Pages/AuthPages/Login";
+import Register from "../Pages/AuthPages/Register";
 export const routeObj = {
-  // login: "/auth/login",
-  // register: "/auth/register",
+  login: "/auth/login",
+  register: "/auth/register",
   landing: "/home",
   // about: "/about",
   // contact: "/contact",
@@ -128,15 +130,15 @@ export const authRoute = [
   //     path: routeObj.services,
   //     component: Services,
   //   },
-  //   {
-  //     path: routeObj.register,
-  //     component: Register,
-  //   },
+    {
+      path: routeObj.register,
+      component: Register,
+    },
 
-  //   {
-  //     path: routeObj.login,
-  //     component: Login,
-  //   },
+    {
+      path: routeObj.login,
+      component: Login,
+    },
   //   {
   //     path: routeObj.packages,
   //     component: Packages,
