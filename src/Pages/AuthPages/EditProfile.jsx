@@ -43,7 +43,7 @@ export default function EditProfile() {
     fullname: user?.fullname,
     country: user?.country,
     crypto: user?.crypto ? user?.crypto : "bitcoin",
-    address: user?.address ? user?.address : "",
+    address: user?.address,
     // email: "",
     // phone: "",
     // fullname: "",
@@ -83,17 +83,16 @@ export default function EditProfile() {
                 console.log(values, id);
 
                 const body = { values, id };
-                dispatch(profileEdit(body));
-                // .then((result) => {
-                //   if (result.meta.requestStatus === "fulfilled") {
-                //     navigate(routeObj.profile);
-                //     dispatch(reset());
-                //   }
-                //   if (result.meta.requestStatus === "rejected") {
-                //     notifyError(message);
-                //     dispatch(reset());
-                //   }
-                // });
+                dispatch(profileEdit(body)).then((result) => {
+                  if (result.meta.requestStatus === "fulfilled") {
+                    navigate(routeObj.profile);
+                    dispatch(reset());
+                  }
+                  if (result.meta.requestStatus === "rejected") {
+                    notifyError(message);
+                    dispatch(reset());
+                  }
+                });
               }}
             >
               {(props) => (
@@ -222,6 +221,12 @@ export default function EditProfile() {
                         onBlur={props.handleBlur}
                         // value={props.values.address}
                       >
+                        <option
+                          style={{ backgroundColor: "white" }}
+                          value={props.values.crypto}
+                        >
+                          {user?.crypto}
+                        </option>
                         <option
                           style={{ backgroundColor: "white" }}
                           value="bitcoin"
