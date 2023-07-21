@@ -226,26 +226,7 @@ export default function Profile() {
               <Heading fontSize={"30px"}>Withrawal Method</Heading>
               <Flex pt={"20px"} h="70%" justify={"space-between"}>
                 <Box bg={"white"} p="20px" h={"100%"} w="25%">
-                  <Select _placeholder={{ backgroundColor: "white" }}>
-                    <option
-                      style={{ backgroundColor: "white" }}
-                      value="option1"
-                    >
-                      Bitcoin
-                    </option>
-                    <option
-                      style={{ backgroundColor: "white" }}
-                      value="option2"
-                    >
-                      USDT (ERC20)
-                    </option>
-                    <option
-                      style={{ backgroundColor: "white" }}
-                      value="option3"
-                    >
-                      USDT (TRC20)
-                    </option>
-                  </Select>
+                  {user?.crypto}
                 </Box>
                 <Box bg={"white"} p="20px" h={"100%"} w="65%">
                   <Input
@@ -255,7 +236,7 @@ export default function Profile() {
                     placeholder="Last Name"
                     borderColor="#C9C9C9"
                     color="font.dark"
-                    value={"TMYxEM8KPKw2ssShTw4uNrDxinbQw3PGdj"}
+                    value={user?.address}
                     _placeholder={{ color: "font.dark" }}
                   />
                 </Box>
