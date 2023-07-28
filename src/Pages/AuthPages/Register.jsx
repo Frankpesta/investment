@@ -36,7 +36,7 @@ const Register = () => {
     };
     // console.log(data);
     dispatch(Registeration(data)).then((result) => {
-      // console.log(result);
+      console.log(result);
       if (result.meta.requestStatus === "fulfilled") {
         notifySuccess("Registeration Successful");
         setEmail("");

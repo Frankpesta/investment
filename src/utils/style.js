@@ -9,11 +9,15 @@ const theme = {
     initialColorMode: "light",
     useSystemColorMode: true,
   },
+  fonts: {
+    body: "Roboto"
+  },
   styles: {
     global: {
       html: {
         "font-size": "16px",
         "font-style": "normal",
+        "font-family": "Roboto",
         bg: "white",
       },
       body: {
@@ -27,7 +31,6 @@ const theme = {
         margin: 0,
         padding: 0,
         "box-sizing": "border-box",
-        "font-family": "Hellix !important",
       },
     },
   },
