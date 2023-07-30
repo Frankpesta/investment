@@ -1,27 +1,26 @@
-import { BiSupport } from 'react-icons/bi'
 
 export  const cardDetails = [
     {
         key: 1,
-        icon: '',
+        icon: 'bi bi-telephone-plus-fill',
         header: 'Live Support 24/7',
         details: 'A team of professionals are always here to support you to ensure smooth and note-worthy experience with us.'
     },
     {
         key: 2,
-        icon: '',
+        icon: 'bi bi-wallet2',
         header: 'Convenient Withdrawals',
         details: 'Withdraw your money in an instant using a wide range of available stress-free payment systems.'
     },
     {
         key: 3,
-        icon: '',
+        icon: 'bi bi-bar-chart-fill',
         header: 'Trading Efficiency',
         details: 'The high level of training of traders and the use of innovative methods of analytics and monitoring indicative exchange fluctuations allows for maximizing profits.'
     },
     {
         key: 4,
-        icon: '',
+        icon: 'bi bi-award-fill',
         header: 'Award Winning Platform',
         details: 'Award-winning software recognized by the industry’s most respected experts.'
     },
@@ -91,7 +90,7 @@ export const RealEstatePlans = [
         min: '100,000',
         max: '999,999',
         ref: '7%',
-        duration: '1 YEARS',
+        duration: '1 YEAR',
         withdrawal: "Instant Withdrawal"
     },
     {

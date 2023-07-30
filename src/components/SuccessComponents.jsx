@@ -52,7 +52,7 @@ const SuccessComponents = () => {
             />
           </svg>
           <p className="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">
-            Save time managing advertising &amp; Content for your business.
+            This is why we stand out from the competition...
           </p>
         </header>
         {/* End heading */}
@@ -62,6 +62,7 @@ const SuccessComponents = () => {
             {/* service block */}
             {cardDetails.map((deets) => (
                 <div
+                key={deets.key}
                 className="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp"
                 data-wow-duration="1s"
                 style={{
@@ -73,16 +74,16 @@ const SuccessComponents = () => {
               <div key={deets.key} className="py-8 px-12 mb-12 bg-gray-50 border shadow-md rounded-md border-teal-700 transform transition duration-300 ease-in-out hover:-translate-y-2">
                 <div className="inline-block text-gray-900 mb-4">
                   {/* icon */}
-                  <svg
+                  {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="2rem"
                     height="2rem"
                     fill="currentColor"
-                    className="bi bi-search"
+                    className={`${deets.icon}`}
                     viewBox="0 0 16 16"
                   >
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
+                  </svg> */}
                 </div>
                 <h3 className="text-lg leading-normal mb-2 font-semibold text-black">
                   {deets.header}

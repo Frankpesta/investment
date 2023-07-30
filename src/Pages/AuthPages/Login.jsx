@@ -5,6 +5,8 @@ import { useDispatch } from "react-redux";
 import { login, reset } from "../../app/services/auth/authSplice";
 import { useCustomToast } from "../../utils/toast";
 import { routeObj } from "../../constants/routes";
+import NavBar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -35,6 +37,8 @@ const Login = () => {
   };
 
   return (
+    <>
+    <NavBar />
     <section className="mx-0 lg:mx-4 my-4">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="relative flex items-end px-4 pb-10 pt-60 sm:pb-16 md:justify-center lg:pb-24 bg-gray-50 sm:px-6 lg:px-8">
@@ -147,6 +151,8 @@ const Login = () => {
         </div>
       </div>
     </section>
+    <Footer />
+    </>
   );
 };
 

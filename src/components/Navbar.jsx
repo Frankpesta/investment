@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import {GrClose} from 'react-icons/gr';
+import {AiOutlineMenu} from 'react-icons/ai';
 
 export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
@@ -18,33 +20,10 @@ export default function NavBar() {
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-black"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <GrClose color="black" size={25} />
+                  
                 ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-6 h-6 text-black"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
+                  <AiOutlineMenu color="black" size={25} />
                 )}
               </button>
             </div>
@@ -56,7 +35,7 @@ export default function NavBar() {
               navbar ? "block" : "hidden"
             }`}
           >
-            <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 uppercase font-semibold text-[14px]">
               <li className="text-black hover:text-teal-700">
                 <NavLink to='/home'>Home</NavLink>
               </li>
@@ -67,31 +46,31 @@ export default function NavBar() {
                 <NavLink to='/packages'>Packages</NavLink>
               </li>
               <li className="text-black hover:text-teal-700">
-                <NavLink to='services'>Services</NavLink>
+                <NavLink to='/services'>Services</NavLink>
               </li>
               <li className="text-black hover:text-teal-700">
-                <NavLink to='faqs'>FAQs</NavLink>
+                <NavLink to='/faqs'>FAQs</NavLink>
               </li>
               <li className="text-black hover:text-teal-700">
-                <NavLink to='about'>About Us</NavLink>
+                <NavLink to='/about'>About Us</NavLink>
               </li>
               <li className="text-black hover:text-teal-700">
-                <NavLink to='contact'>Contact</NavLink>
+                <NavLink to='/contact'>Contact</NavLink>
               </li>
             </ul>
 
-            <div className="mt-3 space-y-2 lg:hidden md:inline-block">
+            <div className="mt-3 space-y-6 lg:hidden md:inline-block">
               <Link
               to='/auth/login'
-                className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
+                // className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
               >
-                Sign in
+                <button className="btn btn-primary w-full text-white">Login</button>
               </Link>
               <Link
-                to='/auth/register'
-                className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
+                // to='/auth/register'
+                // className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
               >
-                Sign up
+                <button className="btn btn-outline w-full text-black">Register</button>
               </Link>
             </div>
           </div>
@@ -99,15 +78,15 @@ export default function NavBar() {
         <div className="hidden space-x-8 md:inline-block">
           <Link
             to='/auth/login'
-            className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800 duration-500"
+            // className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800 duration-500"
           >
-            Sign in
+            <button className="btn btn-primary text-white">Login</button>
           </Link>
           <Link
             to='/auth/register'
-            className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
+            // className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
           >
-            Sign up
+            <button className="btn btn-outline text-black">Register</button>
           </Link>
         </div>
       </div>

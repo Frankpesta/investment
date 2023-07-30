@@ -16,6 +16,12 @@ import EditProfile from "../Pages/AuthPages/EditProfile";
 import Login from "../Pages/AuthPages/Login";
 import Register from "../Pages/AuthPages/Register";
 import UsersProfit from "../Pages/AuthPages/UsersProfit";
+import About from '../Pages/StaticPages/About';
+import Packages from '../Pages/StaticPages/Packages';
+import Services from '../Pages/StaticPages/Services';
+import Security from '../Pages/StaticPages/Security';
+import Faqs from '../Pages/StaticPages/Faqs';
+import Contact from '../Pages/StaticPages/Contact'
 export const routeObj = {
   login: "/auth/login",
   register: "/auth/register",
@@ -124,18 +130,18 @@ export const authRoute = [
   //     path: `${routeObj.viewblog}:code`,
   //     component: ViewBlog,
   //   },
-  //   {
-  //     path: routeObj.about,
-  //     component: About,
-  //   },
-  //   {
-  //     path: routeObj.contact,
-  //     component: Contact,
-  //   },
-  //   {
-  //     path: routeObj.services,
-  //     component: Services,
-  //   },
+     {
+      path: routeObj.about,
+      component: About,
+    },
+    {
+      path: routeObj.contact,
+      component: Contact,
+    },
+    {
+      path: routeObj.services,
+      component: Services,
+    },
   {
     path: routeObj.register,
     component: Register,
@@ -145,18 +151,18 @@ export const authRoute = [
     path: routeObj.login,
     component: Login,
   },
-  //   {
-  //     path: routeObj.packages,
-  //     component: Packages,
-  //   },
-  //   {
-  //     path: routeObj.faq,
-  //     component: Freqs,
-  //   },
-  //   {
-  //     path: routeObj.security,
-  //     component: Security,
-  //   },
+    {
+      path: routeObj.packages,
+      component: Packages,
+    },
+    {
+      path: routeObj.faq,
+      component: Faqs,
+    },
+    {
+      path: routeObj.security,
+      component: Security,
+    },
   //   {
   //     path: routeObj.forgotPassword,
   //     component: ForgotPassword,
