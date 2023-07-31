@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import Layout from "../../layouts/Layout";
 import { MdLocationOn, MdModeEdit } from "react-icons/md";
-// import EditModal from "../../Component/modal/EditModal";
+import EditModal from "../../components/modal/EditModal";
 import { routeObj } from "../../constants/routes";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -43,7 +43,7 @@ export default function Profile() {
 
   return (
     <Layout>
-      {/* <EditModal onClose={onClose} title={title} isOpen={isOpen} /> */}
+      <EditModal onClose={onClose} title={title} isOpen={isOpen} />
       <Skeleton isLoaded={!isLoading}>
         <Box
           pt={{ base: "3rem", md: "84px" }}
