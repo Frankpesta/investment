@@ -6,6 +6,8 @@ import { Registeration, reset } from "../../app/services/auth/authSplice";
 import { useCustomToast } from "../../utils/toast";
 import { useDispatch } from "react-redux";
 import { routeObj } from "../../constants/routes";
+import NavBar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -36,7 +38,7 @@ const Register = () => {
     };
     // console.log(data);
     dispatch(Registeration(data)).then((result) => {
-      // console.log(result);
+      console.log(result);
       if (result.meta.requestStatus === "fulfilled") {
         notifySuccess("Registeration Successful");
         setEmail("");
@@ -54,6 +56,8 @@ const Register = () => {
   };
 
   return (
+    <>
+    <NavBar />
     <section className="m-4">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div className="relative flex items-end px-4 pb-10 pt-60 sm:pb-16 md:justify-center lg:pb-24 bg-gray-50 sm:px-6 lg:px-8">
@@ -278,6 +282,8 @@ const Register = () => {
         </div>
       </div>
     </section>
+    <Footer />
+    </>
   );
 };
 

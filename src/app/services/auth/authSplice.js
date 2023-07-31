@@ -28,13 +28,14 @@ export const Registeration = createAsyncThunk(
   "auth/sign-up",
   async (user, thunkAPI) => {
     try {
+      console.log(user);
       const Response = await config.post("auth/sign-up", user);
       const userInfo = Response.data.auth;
       console.log(userInfo);
-
-      // localStorage.setItem("userInfo", JSON.stringify(userInfo));
-      // return Response;
+      
+      return Response;
     } catch (error) {
+      console.log(error);
       const message =
         (error.response &&
           error.response.data &&
