@@ -14,19 +14,12 @@ import {
   Avatar,
 } from "@chakra-ui/react";
 // import { notifyDataDetails } from "../../app/services/type";
-import { PreviousFmtted } from "../../util/moment";
-import { notifyDataDetails } from "../../app/services/type";
-import { useAppSelector } from "../../app/services/hooks";
+import { PreviousFmtted } from "../../utils/moment";
+import { useSelector } from "react-redux";
 
-type Mrops = {
-  isOpen: boolean;
-  onClose: () => void;
-  data: notifyDataDetails[];
-};
-
-export default function NotificationModal(props: Mrops) {
-  const [notifyData, setNotifyData] = useState<notifyDataDetails[]>();
-  const { user: notify } = useAppSelector((state) => state.Reducers.notify);
+export default function NotificationModal(props) {
+  const [notifyData, setNotifyData] = useState([]);
+  const { user: notify } = useSelector((state) => state.notify);
   useEffect(() => {
     // console.log(notifyData);
     if (notify) {
