@@ -47,7 +47,7 @@ export const routeObj = {
   allrequests: "/all-requests",
   allwithdrawals: "/all-withdrawals",
   address: "/address",
-  usersprofit: "/users-profit/",
+  usersprofit: "/users-profit",
   // verifyemail: "/auth/verify-email",
 };
 
@@ -109,7 +109,7 @@ export const protectedRoutes = [
     component: Address,
   },
   {
-    path: `${routeObj.usersprofit}:code`,
+    path: `${routeObj.usersprofit}`,
     component: UsersProfit,
   },
 ];

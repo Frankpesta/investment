@@ -95,7 +95,7 @@ export const usersProfit = createAsyncThunk(
   "withdraw/profit",
   async (user, thunkAPI) => {
     try {
-      const Response = await config.get(`withdraw/user-pofit/${user}`);
+      const Response = await config.get(`withdraw/user-pofit`);
       console.log(Response.data);
 
       return Response.data;

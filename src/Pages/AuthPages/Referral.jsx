@@ -60,6 +60,7 @@ export default function Referral() {
             justify="center"
             align={"center"}
             px={{ base: "10px" }}
+            flexDir={"column"}
             // fontSize="20px"
           >
             <Text fontSize={"14px"}> Referral Link :</Text>

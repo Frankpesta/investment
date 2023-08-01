@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import Layout from "../../layouts/Layout";
 import { Link } from "react-router-dom";
-import { Request, ApproveReq } from "../../app/services/auth/admin";
+import { Request, ApproveTransac } from "../../app/services/auth/admin";
 import { FormattedTime } from "../../utils/moment";
 import { useCustomToast } from "../../utils/toast";
 import { useDispatch, useSelector } from "react-redux";
@@ -45,7 +45,8 @@ export default function AllRequests() {
 
   async function handleClick(e) {
     try {
-      await dispatch(ApproveReq(e)).then(async (result) => {
+      console.log(e);
+      await dispatch(ApproveTransac(e)).then(async (result) => {
         if (result.meta.requestStatus === "fulfilled") {
           console.log(result);
           notifySuccess(result.payload);
@@ -153,7 +154,7 @@ export default function AllRequests() {
                             </Td>
                             <Td>
                               <Button
-                              // onClick={() => handleClick({ id: students.id })}
+                              onClick={() => handleClick({ id: students.userId })}
                               >
                                 Approve
                               </Button>

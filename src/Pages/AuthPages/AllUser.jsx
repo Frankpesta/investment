@@ -25,9 +25,7 @@ export default function AllUsers() {
   const { isLoading, user } = useSelector((state) => state.admin);
   // console.log(AllDeposit);
 
-  const handleClick = (e) => {
-    navigate(`${routeObj.usersprofit}${e}`);
-  };
+
 
   useEffect(() => {
     if (user) {
@@ -107,7 +105,6 @@ export default function AllUsers() {
                           <Tr
                             key={students.id}
                             cursor="pointer"
-                            onClick={() => handleClick(students.id)}
                           >
                             <Td
                               mt={""}
