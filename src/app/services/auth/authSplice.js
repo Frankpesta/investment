@@ -32,7 +32,7 @@ export const Registeration = createAsyncThunk(
       const Response = await config.post("auth/sign-up", user);
       const userInfo = Response.data.auth;
       console.log(userInfo);
-      
+
       return Response;
     } catch (error) {
       console.log(error);
@@ -75,6 +75,11 @@ export const logout = createAsyncThunk("auth/logout", async () => {
 });
 
 const usdd = localStorage.getItem("userInfo");
+
+if (usdd === "undefined") {
+  localStorage.removeItem("userInfo");
+  location.reload();
+}
 
 const user = usdd ? JSON.parse(localStorage.getItem("userInfo")) : null;
 

@@ -27,7 +27,7 @@ import {
   FaUserFriends,
   FaBitcoin,
 } from "react-icons/fa";
-import { GiPayMoney, GiReceiveMoney, GiMoneyStack } from "react-icons/gi";
+import { GiPayMoney, GiReceiveMoney,GiTakeMyMoney, GiMoneyStack } from "react-icons/gi";
 import { AiFillProfile } from "react-icons/ai";
 import { BiSearchAlt2, BiGlobe } from "react-icons/bi";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -131,12 +131,12 @@ const SidebarContent = ({ onClose, ...rest }) => {
     { name: "Dashboard", icon: BsFillBookmarkFill, url: routeObj.home },
     { name: "Deposit Funds", icon: FaCoins, url: routeObj.deposit },
     { name: "View Deposits", icon: GiPayMoney, url: routeObj.viewdeposit },
+    { name: "Earnings", icon: GiTakeMyMoney, url: routeObj.usersprofit },
     {
       name: "View Withdrawals",
       icon: GiMoneyStack,
       url: routeObj.viewwithdrawal,
     },
-    // { name: "Earning", icon: GiTakeMyMoney, url: routeObj.services },
     { name: "My Referrals", icon: AiFillProfile, url: routeObj.referrer },
     { name: "Profile", icon: FaUserTie, url: routeObj.profile },
   ];
