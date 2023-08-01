@@ -6,407 +6,157 @@ import Layout from "../../layouts/Layout";
 export default function Deposit() {
   return (
     <Layout>
-      <Box color={"black"} pt="50px" pb="150px">
-        <Flex
-          justify={{ base: "center", md: "space-between" }}
-          wrap="wrap"
-          align={"center"}
-          m="auto"
-          //   px={"5px"}
-          w={"95%"}
-        >
-          <Flex
-            w={{ base: "95%", md: "31%" }}
-            minH="300px"
-            bg={"white"}
-            boxShadow="2xl"
-            flexDir="column"
-            mt={{ base: "40px", md: "0" }}
-          >
-            <Flex h={"200px"} w="100%">
-              <Image src="assets/images/plan6.png" w={"100%"} />
-            </Flex>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              fontWeight={"700"}
-              fontSize="20px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-            >
-              {" "}
-              Regular Plan
-            </Text>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <b>Minimum Amount </b>: $500
-            </Text>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <b>Maximum Amount </b>: $4,999
-            </Text>
-            <Flex
-              justify={"center"}
-              align="center"
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <Link to={`${routeObj.depositytpe}${"Regular"}`}>
-                <Text
-                  p="10px"
-                  px={"20px"}
-                  bg={"teal.900"}
-                  color="white"
-                  borderRadius={"5px"}
-                  fontWeight={"700"}
-                  fontSize="18px"
-                  w={"fit-content"}
-                  h={"fit-content"}
-                >
-                  Deposit
-                </Text>
-              </Link>
-            </Flex>
-          </Flex>
-          <Flex
-            w={{ base: "95%", md: "31%" }}
-            minH="300px"
-            bg={"white"}
-            boxShadow="2xl"
-            flexDir="column"
-            mt={{ base: "40px", md: "0" }}
-          >
-            <Flex h={"200px"} w="100%">
-              <Image src="assets/images/plan5.png" w={"100%"} />
-            </Flex>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              fontWeight={"700"}
-              fontSize="20px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-            >
-              {" "}
-              Premium Plan
-            </Text>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <b>Minimum Amount </b>: $5000
-            </Text>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <b>Maximum Amount </b>: $29,999
-            </Text>
-            <Flex
-              justify={"center"}
-              align="center"
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <Link to={`${routeObj.depositytpe}${"Premium"}`}>
-                <Text
-                  p="10px"
-                  px={"20px"}
-                  bg={"teal.900"}
-                  color="white"
-                  borderRadius={"5px"}
-                  fontWeight={"700"}
-                  fontSize="18px"
-                  w={"fit-content"}
-                  h={"fit-content"}
-                >
-                  Deposit
-                </Text>
-              </Link>
-            </Flex>
-          </Flex>
-          <Flex
-            w={{ base: "95%", md: "31%" }}
-            minH="300px"
-            bg={"white"}
-            boxShadow="2xl"
-            flexDir="column"
-            mt={{ base: "40px", md: "0" }}
-          >
-            <Flex h={"200px"} w="100%">
-              <Image src="assets/images/plan4.png" w={"100%"} />
-            </Flex>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              fontWeight={"700"}
-              fontSize="20px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-            >
-              {" "}
-              Zenith Plan
-            </Text>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <b>Minimum Amount </b>: $30,000
-            </Text>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <b>Maximum Amount </b>: $49,999
-            </Text>
-            <Flex
-              justify={"center"}
-              align="center"
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <Link to={`${routeObj.depositytpe}${"Zenith"}`}>
-                <Text
-                  p="10px"
-                  px={"20px"}
-                  bg={"teal.900"}
-                  color="white"
-                  borderRadius={"5px"}
-                  fontWeight={"700"}
-                  fontSize="18px"
-                  w={"fit-content"}
-                  h={"fit-content"}
-                >
-                  Deposit
-                </Text>
-              </Link>
-            </Flex>
-          </Flex>
-          <Flex
-            w={{ base: "95%", md: "31%" }}
-            minH="300px"
-            bg={"white"}
-            boxShadow="2xl"
-            flexDir="column"
-            mt={"40px"}
-          >
-            <Flex h={"200px"} w="100%">
-              <Image src="assets/images/plan3.png" w={"100%"} />
-            </Flex>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              fontWeight={"700"}
-              fontSize="20px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-            >
-              {" "}
-              Horizon Plan
-            </Text>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <b>Minimum Amount </b>: $50,000
-            </Text>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <b>Maximum Amount </b>: $100,000
-            </Text>
-            <Flex
-              justify={"center"}
-              align="center"
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <Link to={`${routeObj.depositytpe}${"Horizon"}`}>
-                <Text
-                  p="10px"
-                  px={"20px"}
-                  bg={"teal.900"}
-                  color="white"
-                  borderRadius={"5px"}
-                  fontWeight={"700"}
-                  fontSize="18px"
-                  w={"fit-content"}
-                  h={"fit-content"}
-                >
-                  Deposit
-                </Text>
-              </Link>
-            </Flex>
-          </Flex>
-          <Flex
-            w={{ base: "95%", md: "31%" }}
-            minH="300px"
-            bg={"white"}
-            boxShadow="2xl"
-            flexDir="column"
-            mt={"40px"}
-          >
-            <Flex h={"200px"} w="100%">
-              <Image src="assets/images/plan2.png" w={"100%"} />
-            </Flex>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              fontWeight={"700"}
-              fontSize="20px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-            >
-              {" "}
-              Retirement Plan
-            </Text>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <b>Minimum Amount </b>: $100,000
-            </Text>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <b>Maximum Amount </b>: $Unlimited
-            </Text>
-            <Flex
-              justify={"center"}
-              align="center"
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <Link to={`${routeObj.depositytpe}${"Retirement"}`}>
-                <Text
-                  p="10px"
-                  px={"20px"}
-                  bg={"teal.900"}
-                  color="white"
-                  borderRadius={"5px"}
-                  fontWeight={"700"}
-                  fontSize="18px"
-                  w={"fit-content"}
-                  h={"fit-content"}
-                >
-                  Deposit
-                </Text>
-              </Link>
-            </Flex>
-          </Flex>
-          <Flex
-            w={{ base: "95%", md: "31%" }}
-            minH="300px"
-            bg={"white"}
-            boxShadow="2xl"
-            flexDir="column"
-            mt={"40px"}
-          >
-            <Flex h={"200px"} w="100%">
-              <Image src="assets/images/plan1.png" w={"100%"} />
-            </Flex>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              fontWeight={"700"}
-              fontSize="20px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-            >
-              {" "}
-              Contract Plan
-            </Text>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <b>Minimum Amount </b>: $1,000,000
-            </Text>
-            <Text
-              textAlign={"center"}
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <b>Maximum Amount </b>: Unlimited
-            </Text>
-            <Flex
-              justify={"center"}
-              align="center"
-              py="10px"
-              borderTop={"1px solid teal"}
-              borderBottom={"1px solid teal"}
-              fontSize="18px"
-            >
-              <Link to={`${routeObj.depositytpe}${"Contract"}`}>
-                <Text
-                  p="10px"
-                  px={"20px"}
-                  bg={"teal.900"}
-                  color="white"
-                  borderRadius={"5px"}
-                  fontWeight={"700"}
-                  fontSize="18px"
-                  w={"fit-content"}
-                  h={"fit-content"}
-                >
-                  Deposit
-                </Text>
-              </Link>
-            </Flex>
-          </Flex>
-        </Flex>
-      </Box>
+      <section className="pt-6">
+          <div className="max-w-2xl mx-auto text-center pb-6">
+            <h2 className="text-xl font-bold leading-tight text-black sm:text-xl lg:text-xl">
+              CRYPTO PLANS
+            </h2>
+          </div>
+          <div className="flex flex-wrap gap-8 items-center justify-center">
+            <div className="bg-white border-4 border-teal-600 rounded-md shadow-md">
+              <div className="p-3 md:py-6 md:px-9">
+                <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-center">
+                  <h3 className="text-sm font-semibold text-teal-800">
+                    BASIC
+                  </h3>
+                </div>
+               <div className="text-center">
+                <div className="divider" />
+                <p className="mt-2 font-bold text-teal-600">MIN: $200</p>
+                <p className="mt-2 font-bold text-teal-600">MAX: $19,999</p>
+                <p className="mt-2 font-bold text-teal-600">DURATION: 3 MONTHS</p>
+               </div>
+                <button className="btn btn-primary w-full text-white mt-4">Deposit</button>
+              </div>
+            </div>
+
+            <div className="bg-white border-4 border-teal-800 rounded-md shadow-md">
+              <div className="p-3 md:py-6 md:px-9">
+                <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-center">
+                  <h3 className="text-sm font-semibold text-teal-600">
+                    REGULAR
+                  </h3>
+                </div>
+               <div className="text-center">
+                <div className="divider" />
+                <p className="mt-2 font-bold text-teal-600">MIN: $20,000</p>
+                <p className="mt-2 font-bold text-teal-600">MAX: $99,999</p>
+                <p className="mt-2 font-bold text-teal-600">DURATION: 6 MONTHS</p>
+               </div>
+                <button className="btn btn-primary w-full text-white mt-4">Deposit</button>
+              </div>
+            </div>
+
+            <div className="bg-white border-4 border-teal-800 rounded-md shadow-md">
+              <div className="p-3 md:py-6 md:px-9">
+                <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-center">
+                  <h3 className="text-sm font-semibold text-teal-600">
+                    STANDARD
+                  </h3>
+                </div>
+               <div className="text-center">
+                <div className="divider" />
+                <p className="mt-2 font-bold text-teal-600">MIN: $100,000</p>
+                <p className="mt-2 font-bold text-teal-600">MAX: $999,999</p>
+                <p className="mt-2 font-bold text-teal-600">DURATION: 3 MONTHS</p>
+               </div>
+                <button className="btn btn-primary w-full text-white mt-4">Deposit</button>
+              </div>
+            </div>
+
+            <div className="bg-white border-4 border-teal-800 rounded-md shadow-md">
+              <div className="p-3 md:py-6 md:px-9">
+                <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-center">
+                  <h3 className="text-sm font-semibold text-teal-600">
+                    PREMIUM
+                  </h3>
+                </div>
+               <div className="text-center">
+                <div className="divider" />
+                <p className="mt-2 font-bold text-teal-600">MIN: $1,000, 000</p>
+                <p className="mt-2 font-bold text-teal-600">MAX: $UNLIMITED</p>
+                <p className="mt-2 font-bold text-teal-600">DURATION: 6 MONTHS</p>
+               </div>
+                <button className="btn btn-primary w-full text-white mt-4">Deposit</button>
+              </div>
+            </div>
+          </div> 
+
+          <div className="max-w-2xl mx-auto text-center pb-6 pt-4">
+            <h2 className="text-xl font-bold leading-tight text-black sm:text-xl lg:text-xl">
+              REAL ESTATE PLANS
+            </h2>
+          </div>
+          <div className="flex flex-wrap gap-8 items-center justify-center">
+            <div className="bg-white border-4 border-teal-800 rounded-md shadow-md">
+              <div className="p-3 md:py-6 md:px-9">
+                <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-center">
+                  <h3 className="text-sm font-semibold text-teal-600">
+                    BRONZE
+                  </h3>
+                </div>
+               <div className="text-center">
+                <div className="divider" />
+                <p className="mt-2 font-bold text-teal-600">MIN: $5,000</p>
+                <p className="mt-2 font-bold text-teal-600">MAX: $49,999</p>
+                <p className="mt-2 font-bold text-teal-600">DURATION: 6 MONTHS</p>
+               </div>
+                <button className="btn btn-primary w-full text-white mt-4">Deposit</button>
+              </div>
+            </div>
+
+            <div className="bg-white border-4 border-teal-800 rounded-md shadow-md">
+              <div className="p-3 md:py-6 md:px-9">
+                <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-center">
+                  <h3 className="text-sm font-semibold text-teal-600">
+                    SILVER
+                  </h3>
+                </div>
+               <div className="text-center">
+                <div className="divider" />
+                <p className="mt-2 font-bold text-teal-600">MIN: $50,000</p>
+                <p className="mt-2 font-bold text-teal-600">MAX: $99,999</p>
+                <p className="mt-2 font-bold text-teal-600">DURATION: 9 MONTHS</p>
+               </div>
+                <button className="btn btn-primary w-full text-white mt-4">Deposit</button>
+              </div>
+            </div>
+
+            <div className="bg-white border-4 border-teal-800 rounded-md shadow-md">
+              <div className="p-3 md:py-6 md:px-9">
+                <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-center">
+                  <h3 className="text-sm font-semibold text-teal-600">
+                    GOLD
+                  </h3>
+                </div>
+               <div className="text-center">
+                <div className="divider" />
+                <p className="mt-2 font-bold text-teal-600">MIN: $100,000</p>
+                <p className="mt-2 font-bold text-teal-600">MAX: $999,999</p>
+                <p className="mt-2 font-bold text-teal-600">DURATION: 1 YEAR</p>
+               </div>
+                <button className="btn btn-primary w-full text-white mt-4">Deposit</button>
+              </div>
+            </div>
+
+            <div className="bg-white border-4 border-teal-800 rounded-md shadow-md">
+              <div className="p-3 md:py-6 md:px-9">
+                <div className="inline-block px-4 py-2 bg-blue-100 rounded-full text-center">
+                  <h3 className="text-sm font-semibold text-teal-600">
+                    DIAMOND
+                  </h3>
+                </div>
+               <div className="text-center">
+                <div className="divider" />
+                <p className="mt-2 font-bold text-teal-600">MIN: $1,000, 000</p>
+                <p className="mt-2 font-bold text-teal-600">MAX: $UNLIMITED</p>
+                <p className="mt-2 font-bold text-teal-600">DURATION: 2 YEARS</p>
+               </div>
+                <button className="btn btn-primary w-full text-white mt-4">Deposit</button>
+              </div>
+            </div>
+          </div> 
+      </section>
     </Layout>
   );
 }

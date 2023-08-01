@@ -49,6 +49,8 @@ import { logout } from "../app/services/auth/authSplice";
 //   icon: IconType;
 // }
 
+const date = new Date().getFullYear();
+
 export default function Layout({ children }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -75,7 +77,7 @@ export default function Layout({ children }) {
       <Box
         ml={{ base: 0, md: "260px" }}
         pos="relative"
-        minH="calc(100vh)"
+        minH="calc(125vh)"
         bg={""}
         // overflowY={"scroll"}
         // maxH="200vh"
@@ -96,10 +98,9 @@ export default function Layout({ children }) {
             justifyContent="space-between"
             color="black"
             fontSize={{ base: "12px", md: "16px" }}
-            fontStyle="italic"
           >
-            <Text fontWeight="600">BlackRock</Text>
-            <Text fontWeight="400"> @ 2023 all rights reserved</Text>
+            <Text fontWeight="400">BlackRock</Text>
+            <Text fontWeight="200"> @ {date} All rights reserved</Text>
           </Flex>
         </Box>
       </Box>
