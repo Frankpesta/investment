@@ -107,6 +107,29 @@ export const ApproveReq = createAsyncThunk(
     }
   }
 );
+export const ApproveTransac = createAsyncThunk(
+  "admin/transsc",
+  async (user, thunkAPI) => {
+    try {
+      // console.log(user);
+
+      const Response = await config.post(`admin/transactions`, user);
+      // console.log(Response);
+
+      return Response.message;
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      console.log(error);
+
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
 
 const initialState = {
   user: null,
@@ -183,6 +206,11 @@ const AdminSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(ApproveReq.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.message = action.payload;
+      })
+      .addCase(ApproveTransac.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
         state.message = action.payload;
