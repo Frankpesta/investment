@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from '../assets/logo.png';
 
 const Footer = () => {
   const date = new Date().getFullYear();
@@ -8,9 +9,9 @@ const Footer = () => {
   <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
     <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-y-12 gap-x-8 xl:gap-x-12">
       <div className="col-span-2 md:col-span-4 xl:pr-8">
-        {/* <img className="w-auto h-9" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg" alt /> */}
-        <h2>LOGO</h2>
-        <p className="text-base leading-relaxed mt-7">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+        <img className="w-auto h-9" src={Logo} alt='Logo-footer' />
+        
+        <p className="text-base leading-relaxed mt-7">Unlocking Opportunities, Maximizing Returns | WBridgeAdvisors - Your Bridge to Effective Investment Strategies and Comprehensive Asset Management, Nurturing Your Wealth for Long-Term Prosperity</p>
       </div>
       <div className="lg:col-span-2">
         <p className="text-base font-semibold">Company</p>
@@ -56,8 +57,8 @@ const Footer = () => {
       </div>
     </div>
     <hr className="mt-16 mb-10 border-white" />
-    <div className="sm:flex sm:items-center sm:justify-between">
-      <p className="text-sm">© Copyright {date}, All Rights Reserved by Logo</p>
+    <div className="sm:flex sm:items-center sm:justify-between lg:justify-center">
+      <p className="text-sm text-center">© Copyright {date}, All Rights Reserved by WBRIDGEADVISORS</p>
       
     </div>
   </div>

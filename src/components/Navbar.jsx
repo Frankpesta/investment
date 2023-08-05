@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import {GrClose} from 'react-icons/gr';
 import {AiOutlineMenu} from 'react-icons/ai';
+import Logo from '../assets/logo.png';
 
 export default function NavBar() {
   const [navbar, setNavbar] = useState(false);
@@ -11,9 +12,9 @@ export default function NavBar() {
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <a href="javascript:void(0)">
-              <h2 className="text-2xl font-bold text-black">LOGO</h2>
-            </a>
+           <Link to='/'>
+           <img src={Logo} alt="Logo" className="w-auto h-9" />
+           </Link>
             <div className="md:hidden">
               <button
                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"

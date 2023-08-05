@@ -1,4 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Prof1 from '../assets/prof1.webp';
+import Prof4 from '../assets/prof4.jpg';
+import Prof6 from '../assets/prof6.webp';
+import Prof5 from '../assets/prof5.jpg';
 
 const TheBrains = () => {
   return (
@@ -10,57 +14,27 @@ const TheBrains = () => {
     </div>
     <div className="grid grid-cols-2 mt-8 text-center sm:mt-16 lg:mt-20 sm:grid-cols-4 gap-y-8 lg:grid-cols-9 gap-x-0">
       <div>
-        <img className="object-cover mx-auto rounded-lg w-28 h-28" src="https://cdn.rareblocks.xyz/collection/celebration/images/team/3/team-avatar-1.jpg" alt='' />
-        <p className="mt-8 text-lg font-semibold leading-tight text-black">Jenny Wilson</p>
-        <p className="mt-1 text-base leading-tight text-gray-600">Founder</p>
+        <img className="object-cover mx-auto rounded-lg w-28 h-28" src={Prof4} alt='Prof4' />
+        <p className="mt-8 text-lg font-semibold leading-tight text-black">Oliver Kant</p>
+        <p className="mt-1 text-base leading-tight text-gray-600">Founder and CEO</p>
       </div>
       <div className="hidden lg:block" />
       <div>
-        <img className="object-cover mx-auto rounded-lg w-28 h-28" src="https://cdn.rareblocks.xyz/collection/celebration/images/team/3/team-avatar-2.jpg" alt='' />
+        <img className="object-cover mx-auto rounded-lg w-28 h-28" src={Prof6} alt='Prof6' />
         <p className="mt-8 text-lg font-semibold leading-tight text-black">Darrell Steward</p>
-        <p className="mt-1 text-base leading-tight text-gray-600">CTO</p>
+        <p className="mt-1 text-base leading-tight text-gray-600">Chief Trading Officer</p>
       </div>
       <div className="hidden lg:block" />
       <div>
-        <img className="object-cover mx-auto rounded-lg w-28 h-28" src="https://cdn.rareblocks.xyz/collection/celebration/images/team/3/team-avatar-3.jpg" alt='' />
-        <p className="mt-8 text-lg font-semibold leading-tight text-black">Bessie Cooper</p>
+        <img className="object-cover mx-auto rounded-lg w-28 h-28" src={Prof5} alt='Prof5' />
+        <p className="mt-8 text-lg font-semibold leading-tight text-black">Arlene McCoy</p>
         <p className="mt-1 text-base leading-tight text-gray-600">CMO</p>
       </div>
       <div className="hidden lg:block" />
       <div>
-        <img className="object-cover mx-auto rounded-lg w-28 h-28" src="https://cdn.rareblocks.xyz/collection/celebration/images/team/3/team-avatar-4.jpg" alt='' />
-        <p className="mt-8 text-lg font-semibold leading-tight text-black">Arlene McCoy</p>
-        <p className="mt-1 text-base leading-tight text-gray-600">Senior Developer</p>
-      </div>
-      <div className="hidden lg:block" />
-      <div>
-        <img className="object-cover mx-auto rounded-lg w-28 h-28" src="https://cdn.rareblocks.xyz/collection/celebration/images/team/3/team-avatar-5.jpg" alt='' />
-        <p className="mt-8 text-lg font-semibold leading-tight text-black">Brooklyn Simmons</p>
-        <p className="mt-1 text-base leading-tight text-gray-600">Product Designer</p>
-      </div>
-      <div className="hidden lg:block" />
-      <div>
-        <img className="object-cover mx-auto rounded-lg w-28 h-28" src="https://cdn.rareblocks.xyz/collection/celebration/images/team/3/team-avatar-6.jpg" alt='' />
-        <p className="mt-8 text-lg font-semibold leading-tight text-black">Jerome Bell</p>
-        <p className="mt-1 text-base leading-tight text-gray-600">Customer Success</p>
-      </div>
-      <div className="hidden lg:block" />
-      <div>
-        <img className="object-cover mx-auto rounded-lg w-28 h-28" src="https://cdn.rareblocks.xyz/collection/celebration/images/team/3/team-avatar-7.jpg" alt='' />
-        <p className="mt-8 text-lg font-semibold leading-tight text-black">Dianne Russell</p>
-        <p className="mt-1 text-base leading-tight text-gray-600">Front-end Developer</p>
-      </div>
-      <div className="hidden lg:block" />
-      <div>
-        <img className="object-cover mx-auto rounded-lg w-28 h-28" src="https://cdn.rareblocks.xyz/collection/celebration/images/team/3/team-avatar-8.jpg" alt='' />
-        <p className="mt-8 text-lg font-semibold leading-tight text-black">Kristin Watson</p>
-        <p className="mt-1 text-base leading-tight text-gray-600">H.R</p>
-      </div>
-      <div className="hidden lg:block" />
-      <div>
-        <img className="object-cover mx-auto rounded-lg w-28 h-28" src="https://cdn.rareblocks.xyz/collection/celebration/images/team/3/team-avatar-9.jpg" alt='' />
-        <p className="mt-8 text-lg font-semibold leading-tight text-black">Eleanor Pena</p>
-        <p className="mt-1 text-base leading-tight text-gray-600">UI Designer</p>
+        <img className="object-cover mx-auto rounded-lg w-28 h-28" src={Prof1} alt='prof1' />
+        <p className="mt-8 text-lg font-semibold leading-tight text-black">Benjamin McCoy</p>
+        <p className="mt-1 text-base leading-tight text-gray-600">Senior Asset Manager</p>
       </div>
     </div>
   </div>

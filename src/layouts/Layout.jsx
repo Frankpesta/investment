@@ -99,7 +99,7 @@ export default function Layout({ children }) {
             color="black"
             fontSize={{ base: "12px", md: "16px" }}
           >
-            <Text fontWeight="400">BlackRock</Text>
+            <Text fontWeight="400">WBridgeAdvisors</Text>
             <Text fontWeight="200"> @ {date} All rights reserved</Text>
           </Flex>
         </Box>
@@ -195,7 +195,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
           align="center"
         >
           <Link to={""}>
-            <Image src="/assets/images/INVEST.png" h={"50%"} />
+            <Image src="/assets/images/logo.png" h={"50%"} />
           </Link>
         </Flex>
         <HStack columnGap="12px" display={{ base: "flex", md: "none" }}>
@@ -398,7 +398,7 @@ const Nav = ({ onOpenDrawer, ...rest }) => {
         />
         <Flex h={"40px"} w="120px" justify={"center"} align="center">
           <Link to={""}>
-            <Image src="/assets/images/INVEST.png" h={"50%"} />
+            <Image src="/assets/images/logo.png" h={"50%"} />
           </Link>
         </Flex>
       </Flex>
@@ -432,7 +432,7 @@ const Nav = ({ onOpenDrawer, ...rest }) => {
           bg={""}
           display={{ base: "none", md: "flex" }}
         >
-          <Image src="/assets/images/INVEST.png" />
+          <Image src="/assets/images/logo.png" className="w-fit h-9" />
         </Flex>
       </Flex>
 
