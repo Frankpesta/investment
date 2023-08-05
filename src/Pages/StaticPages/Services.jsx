@@ -14,7 +14,7 @@ const Services = () => {
           WHAT WE OFFER...
         </h2>
         <p className="font-light text-center text-md py-6">
-          At BlackRock, we pride ourselves on our revolutionary "BlackBox"
+          At WbridgeAdvisors , we pride ourselves on our revolutionary "BlackBox"
           algorithm, a proprietary technology that predicts market trends with
           astonishing accuracy. Gain exclusive access to this powerful tool,
           giving you a distinct advantage in the investment world. Our algorithm
