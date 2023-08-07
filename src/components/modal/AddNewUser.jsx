@@ -94,7 +94,7 @@ export default function AddNewUser(props) {
                     <b>Payment Modal</b>
                   </Text>
                   <Text w={"100%"} h="fit-content" textAlign={"right"}>
-                    WbridgeAdvisors  Investment Management - Deposit
+                    WealthBridgeAdvisors  Investment Management - Deposit
                   </Text>
                 </Flex>
               </Flex>

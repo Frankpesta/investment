@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.7.1",
+    "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@lottiefiles/react-lottie-player": "^3.5.3",
     "@reduxjs/toolkit": "^1.9.5",
     "@trendyol-js/react-carousel": "^3.0.2",
     "autoprefixer": "^10.4.14",

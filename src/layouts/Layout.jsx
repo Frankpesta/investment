@@ -99,7 +99,7 @@ export default function Layout({ children }) {
             color="black"
             fontSize={{ base: "12px", md: "16px" }}
           >
-            <Text fontWeight="400">WBridgeAdvisors</Text>
+            <Text fontWeight="400">WealthBridgeAdvisors</Text>
             <Text fontWeight="200"> @ {date} All rights reserved</Text>
           </Flex>
         </Box>

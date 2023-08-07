@@ -15,7 +15,7 @@ const ChooseUs = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
           </svg>
           <h3 className="mt-8 text-lg font-semibold text-black">Trust and Transparency</h3>
-          <p className="mt-4 text-base text-gray-600">At WbridgeAdvisors , we place the utmost importance on trust and transparency. We understand that entrusting your financial well-being to a firm requires confidence and reliability. That is why we adhere to the highest ethical standards, treating our clients' investments with the same care and diligence as our own.</p>
+          <p className="mt-4 text-base text-gray-600">At WealthBridgeAdvisors, we place the utmost importance on trust and transparency. We understand that entrusting your financial well-being to a firm requires confidence and reliability. That is why we adhere to the highest ethical standards, treating our clients' investments with the same care and diligence as our own.</p>
         </div>
       </div>
       <div className="transition-all duration-200 bg-white hover:shadow-xl">

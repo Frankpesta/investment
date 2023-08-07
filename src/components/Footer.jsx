@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="col-span-2 md:col-span-4 xl:pr-8">
         <img className="w-auto h-9" src={Logo} alt='Logo-footer' />
         
-        <p className="text-base leading-relaxed mt-7">Unlocking Opportunities, Maximizing Returns | WBridgeAdvisors - Your Bridge to Effective Investment Strategies and Comprehensive Asset Management, Nurturing Your Wealth for Long-Term Prosperity</p>
+        <p className="text-base leading-relaxed mt-7">Unlocking Opportunities, Maximizing Returns | WealthBridgeAdvisors - Your Bridge to Effective Investment Strategies and Comprehensive Asset Management, Nurturing Your Wealth for Long-Term Prosperity</p>
       </div>
       <div className="lg:col-span-2">
         <p className="text-base font-semibold">Company</p>
@@ -58,7 +58,7 @@ const Footer = () => {
     </div>
     <hr className="mt-16 mb-10 border-white" />
     <div className="sm:flex sm:items-center sm:justify-between lg:justify-center">
-      <p className="text-sm text-center">© Copyright {date}, All Rights Reserved by WBRIDGEADVISORS</p>
+      <p className="text-sm text-center">© Copyright {date}, All Rights Reserved by WealthBridgeAdvisors</p>
       
     </div>
   </div>

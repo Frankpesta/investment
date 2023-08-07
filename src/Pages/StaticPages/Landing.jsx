@@ -9,12 +9,14 @@ import Plans from "../../components/Plans";
 import Referral from "../../components/Referral";
 import Partners from "../../components/Partners";
 import ChooseUs from '../../components/ChooseUs';
+import Hero2 from "../../components/Hero2";
 
 export default function Landing() {
   return (
     <div>
       <Navbar />
-      <Carousel />
+      <Hero2 />
+      {/* <Carousel /> */}
       <Experience />
       <Steps />
       <SuccessComponents />
