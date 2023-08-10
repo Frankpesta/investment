@@ -95,6 +95,7 @@ export default function AddNewUser(props) {
                   </Text>
                   <Text w={"100%"} h="fit-content" textAlign={"right"}>
                     WbridgeAdvisors Investment Management - Deposit
+
                   </Text>
                 </Flex>
               </Flex>
