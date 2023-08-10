@@ -94,7 +94,7 @@ export default function AddNewUser(props) {
                     <b>Payment Modal</b>
                   </Text>
                   <Text w={"100%"} h="fit-content" textAlign={"right"}>
-                    WbridgeAdvisors  Investment Management - Deposit
+                    WbridgeAdvisors Investment Management - Deposit
                   </Text>
                 </Flex>
               </Flex>
@@ -163,58 +163,74 @@ export default function AddNewUser(props) {
                 >
                   <Text display={{ base: "none", md: "block" }}>
                     <b>Minimum Amount: </b>
-                    {props.plan === "Regular"
-                      ? "$500"
+                    {props.plan === "Basic"
+                      ? "$200"
+                      : props.plan === "Regular"
+                      ? "$20,000"
+                      : props.plan === "Standard"
+                      ? "$100,000"
                       : props.plan === "Premium"
+                      ? "$1,000,000"
+                      : props.plan === "Bronze"
                       ? "$5,000"
-                      : props.plan === "Zenith"
-                      ? "$30,000"
-                      : props.plan === "Horizon"
+                      : props.plan === "Silver"
                       ? "$50,000"
-                      : props.plan === "Retirement"
+                      : props.plan === "Gold"
                       ? "$100,000"
                       : "$1,000,000"}
                   </Text>
                   <Text display={{ base: "block", md: "none" }}>
                     <b>Min: </b>
-                    {props.plan === "Regular"
-                      ? "$500"
+                    {props.plan === "Basic"
+                      ? "$200"
+                      : props.plan === "Regular"
+                      ? "$20,000"
+                      : props.plan === "Standard"
+                      ? "$100,000"
                       : props.plan === "Premium"
+                      ? "$1,000,000"
+                      : props.plan === "Bronze"
                       ? "$5,000"
-                      : props.plan === "Zenith"
-                      ? "$30,000"
-                      : props.plan === "Horizon"
+                      : props.plan === "Silver"
                       ? "$50,000"
-                      : props.plan === "Retirement"
+                      : props.plan === "Gold"
                       ? "$100,000"
                       : "$1,000,000"}
                   </Text>
                   <Flex display={{ base: "none", md: "block" }}>
                     <b>Maximum Amount:</b>{" "}
-                    {props.plan === "Regular"
-                      ? "$4,999"
+                    {props.plan === "Basic"
+                      ? "$19,999"
+                      : props.plan === "Regular"
+                      ? "$99,999"
+                      : props.plan === "Standard"
+                      ? "$999,999"
                       : props.plan === "Premium"
-                      ? "$29,999"
-                      : props.plan === "Zenith"
+                      ? "Unlimited"
+                      : props.plan === "Bronze"
                       ? "$49,999"
-                      : props.plan === "Horizon"
-                      ? "$100,000"
-                      : props.plan === "Retirement"
-                      ? "unlimited"
+                      : props.plan === "Silver"
+                      ? "$99,999"
+                      : props.plan === "Gold"
+                      ? "$999,999"
                       : "$Unlimited"}
                   </Flex>
                   <Text display={{ base: "block", md: "none" }}>
                     <b>Max: </b>
-                    {props.plan === "Regular"
-                      ? "$4,999"
+                    {props.plan === "Basic"
+                      ? "$19,999"
+                      : props.plan === "Regular"
+                      ? "$99,999"
+                      : props.plan === "Standard"
+                      ? "$999,999"
                       : props.plan === "Premium"
-                      ? "$29,999"
-                      : props.plan === "Zenith"
+                      ? "Unlimited"
+                      : props.plan === "Bronze"
                       ? "$49,999"
-                      : props.plan === "Horizon"
-                      ? "$100,000"
-                      : props.plan === "Retirement"
-                      ? "unlimited"
+                      : props.plan === "Silver"
+                      ? "$99,999"
+                      : props.plan === "Gold"
+                      ? "$999,999"
                       : "$Unlimited"}
                   </Text>
                 </Flex>
