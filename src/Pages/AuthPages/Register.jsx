@@ -265,7 +265,7 @@ const Register = () => {
                     htmlFor="checkbox"
                     className="text-teal-700 text-base font-medium"
                   >
-                    I've Read and Agreed to the Terms of Service{" "}
+                    I've Read and Agreed to the <Link to='/terms'>Terms of Service{" "}</Link> 
                   </label>
                 </div>
                 <div>

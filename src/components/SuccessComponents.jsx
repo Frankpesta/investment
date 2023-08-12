@@ -1,102 +1,66 @@
 import React from "react";
-import { cardDetails } from "../constants/index";
+import bgImg from '../assets/header-img.avif';
+
 
 const SuccessComponents = () => {
   return (
-    <div
-      id="services"
-      className="section relative pt-20 pb-8 md:pt-16 md:pb-0 bg-white"
-    >
-      <div className="container xl:max-w-6xl mx-auto px-4">
-        {/* Heading start */}
-        <header className="text-center mx-auto mb-12 lg:px-20">
-          <h2 className="text-2xl leading-normal mb-2 font-bold text-black">
-            What We Do
-          </h2>
-          <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-            x="0px"
-            y="0px"
-            viewBox="0 0 100 60"
-            style={{ margin: "0 auto", height: 35 }}
-            xmlSpace="preserve"
-          >
-            <circle
-              cx="50.1"
-              cy="30.4"
-              r={5}
-              className="stroke-primary"
-              style={{
-                fill: "transparent",
-                strokeWidth: 2,
-                strokeMiterlimit: 10,
-              }}
-            />
-            <line
-              x1="55.1"
-              y1="30.4"
-              x2={100}
-              y2="30.4"
-              className="stroke-primary"
-              style={{ strokeWidth: 2, strokeMiterlimit: 10 }}
-            />
-            <line
-              x1="45.1"
-              y1="30.4"
-              x2={0}
-              y2="30.4"
-              className="stroke-primary"
-              style={{ strokeWidth: 2, strokeMiterlimit: 10 }}
-            />
-          </svg>
-          <p className="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">
-            This is why we stand out from the competition...
-          </p>
-        </header>
-        {/* End heading */}
-        {/* row */}
-        <div className="flex flex-wrap flex-row -mx-4 text-center">
-          
-            {/* service block */}
-            {cardDetails.map((deets) => (
-                <div
-                key={deets.key}
-                className="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp"
-                data-wow-duration="1s"
-                style={{
-                  visibility: "visible",
-                  animationDuration: "1s",
-                  animationName: "fadeInUp",
-                }}
-              >
-              <div key={deets.key} className="py-8 px-12 mb-12 bg-gray-50 border shadow-md rounded-md border-teal-700 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                <div className="inline-block text-gray-900 mb-4">
-                  {/* icon */}
-                  {/* <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="2rem"
-                    height="2rem"
-                    fill="currentColor"
-                    className={`${deets.icon}`}
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg> */}
-                </div>
-                <h3 className="text-lg leading-normal mb-2 font-semibold text-black">
-                  {deets.header}
-                </h3>
-                <p className="text-gray-500">
-                  {deets.details}
-                </p>
-              </div>
-              </div>
-            ))}
+ <section className="text-white body-font mt-8" style={{ backgroundImage: `url(${bgImg})`, objectFit: 'cover', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backdropFilter: '' }}>
+  <div className="container px-12 py-24 mx-auto">
+    <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+      <h1 className="sm:text-3xl text-2xl font-lg title-font mb-2 text-gray-100">What We Do.</h1>
+      <p className="lg:w-1/2 w-full leading-relaxed text-gray-100">This is why we stand out from the competition...</p>
+    </div>
+    <div className="flex flex-wrap -m-4">
+      <div className="xl:w-1/3 md:w-1/2 p-4">
+        <div className="border border-gray-200 p-6 rounded-lg">
+          <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-teal-500 mb-4">
+            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-6 h-6" viewBox="0 0 24 24">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+            </svg>
           </div>
+          <h2 className="text-lg text-gray-100 font-medium title-font mb-2">Live Support 24/7</h2>
+          <p className="leading-relaxed text-base">A team of professionals are always here to support you to ensure smooth and note-worthy experience with us.</p>
+        </div>
+      </div>
+      <div className="xl:w-1/3 md:w-1/2 p-4">
+        <div className="border border-gray-200 p-6 rounded-lg">
+          <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-teal-500 mb-4">
+            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-6 h-6" viewBox="0 0 24 24">
+              <circle cx={6} cy={6} r={3} />
+              <circle cx={6} cy={18} r={3} />
+              <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
+            </svg>
+          </div>
+          <h2 className="text-lg text-gray-100 font-medium title-font mb-2">Convenient Withdrawals</h2>
+          <p className="leading-relaxed text-base">Withdraw your money in an instant using a wide range of available stress-free payment systems.</p>
+        </div>
+      </div>
+      <div className="xl:w-1/3 md:w-1/2 p-4">
+        <div className="border border-gray-200 p-6 rounded-lg">
+          <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-teal-500 mb-4">
+            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-6 h-6" viewBox="0 0 24 24">
+              <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7" />
+            </svg>
+          </div>
+          <h2 className="text-lg text-gray-100 font-medium title-font mb-2">Trading Efficiency</h2>
+          <p className="leading-relaxed text-base">The high level of training of traders and the use of innovative methods of analytics and monitoring indicative exchange fluctuations allows for maximizing profits.</p>
+        </div>
+      </div>
+      <div className="xl:w-1/3 md:w-1/2 p-4">
+        <div className="border border-gray-200 p-6 rounded-lg">
+          <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-teal-500 mb-4">
+            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-6 h-6" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+            </svg>
+          </div>
+          <h2 className="text-lg text-gray-100 font-medium title-font mb-2">Award Winning Platform</h2>
+          <p className="leading-relaxed text-base">Award-winning software recognized by the industry’s most respected experts.</p>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+
   );
 };
 

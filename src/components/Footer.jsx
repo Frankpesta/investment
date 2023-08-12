@@ -37,10 +37,10 @@ const Footer = () => {
             <Link to='/contact' className="flex text-sm transition-all duration-200 hover:text-orange-600 focus:text-orange-600"> Contact Us</Link>
           </li>
           <li>
-            <Link to='/' className="flex text-sm transition-all duration-200 hover:text-orange-600 focus:text-orange-600"> Terms &amp; Conditions </Link>
+            <Link to='/terms' className="flex text-sm transition-all duration-200 hover:text-orange-600 focus:text-orange-600"> Terms &amp; Conditions </Link>
           </li>
           <li>
-            <Link to='/' className="flex text-sm transition-all duration-200 hover:text-orange-600 focus:text-orange-600"> Privacy Policy </Link>
+            <Link to='/privacy' className="flex text-sm transition-all duration-200 hover:text-orange-600 focus:text-orange-600"> Privacy Policy </Link>
           </li>
         </ul>
       </div>

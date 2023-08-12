@@ -21,13 +21,17 @@ import Packages from '../Pages/StaticPages/Packages';
 import Services from '../Pages/StaticPages/Services';
 import Security from '../Pages/StaticPages/Security';
 import Faqs from '../Pages/StaticPages/Faqs';
-import Contact from '../Pages/StaticPages/Contact'
+import Contact from '../Pages/StaticPages/Contact';
+import Privacy from "../components/Privacy";
+import Terms from "../components/Terms";
 export const routeObj = {
   login: "/auth/login",
   register: "/auth/register",
   landing: "/home",
   about: "/about",
   contact: "/contact",
+  terms: "/terms",
+  privacy: '/privacy',
   services: "/services",
   packages: "/packages",
   faq: "/faqs",
@@ -133,6 +137,14 @@ export const authRoute = [
      {
       path: routeObj.about,
       component: About,
+    },
+    {
+      path: routeObj.terms,
+      component: Terms,
+    },
+    {
+      path: routeObj.privacy,
+      component: Privacy,
     },
     {
       path: routeObj.contact,
