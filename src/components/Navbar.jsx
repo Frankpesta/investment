@@ -41,7 +41,7 @@ export default function NavBar() {
                 <NavLink to='/home'>Home</NavLink>
               </li>
               <li className="text-black hover:text-teal-700">
-                <NavLink to='/security'>Security</NavLink>
+                <NavLink to='/insights'>Insights</NavLink>
               </li>
               <li className="text-black hover:text-teal-700">
                 <NavLink to='/packages'>Packages</NavLink>

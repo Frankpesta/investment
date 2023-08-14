@@ -20,11 +20,13 @@ import About from '../Pages/StaticPages/About';
 import Packages from '../Pages/StaticPages/Packages';
 import Services from '../Pages/StaticPages/Services';
 import Security from '../Pages/StaticPages/Security';
+import Insights from '../Pages/StaticPages/Insights';
 import Faqs from '../Pages/StaticPages/Faqs';
 import Contact from '../Pages/StaticPages/Contact';
 import Privacy from "../components/Privacy";
 import Terms from "../components/Terms";
 export const routeObj = {
+  insights: '/insights',
   login: "/auth/login",
   register: "/auth/register",
   landing: "/home",
@@ -35,7 +37,7 @@ export const routeObj = {
   services: "/services",
   packages: "/packages",
   faq: "/faqs",
-  security: "/security",
+  security: "/insights",
   forgotPassword: "/auth/forgot-password",
   home: "/dashboard",
   home2: "/admin/dashboard",
@@ -172,8 +174,8 @@ export const authRoute = [
       component: Faqs,
     },
     {
-      path: routeObj.security,
-      component: Security,
+      path: routeObj.insights,
+      component: Insights,
     },
   //   {
   //     path: routeObj.forgotPassword,
