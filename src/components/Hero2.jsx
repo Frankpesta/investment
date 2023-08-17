@@ -2,6 +2,7 @@ import React from 'react';
 import { Player } from '@lottiefiles/react-lottie-player'
 import { Link } from 'react-router-dom';
 import Invest from '../assets/invest.json';
+import Marquee from './Marquee';
 
 const Hero2 = () => {
   return (
@@ -26,6 +27,7 @@ const Hero2 = () => {
       </div>
     </div>
   </section>
+  <Marquee />
 </div>
 
 

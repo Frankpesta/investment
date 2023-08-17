@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import Carousel from "../../components/HomeCarousel";
 import Experience from "../../components/Experience";
 import Steps from "../../components/Steps";
 import SuccessComponents from "../../components/SuccessComponents";
@@ -11,12 +10,13 @@ import Partners from "../../components/Partners";
 import ChooseUs from '../../components/ChooseUs';
 import Hero2 from "../../components/Hero2";
 
+
+
 export default function Landing() {
   return (
     <div>
       <Navbar />
       <Hero2 />
-      {/* <Carousel /> */}
       <Experience />
       <Steps />
       <SuccessComponents />

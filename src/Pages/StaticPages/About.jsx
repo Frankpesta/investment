@@ -73,8 +73,6 @@ const About = () => {
                 environmental, social and governance developments, all while
                 providing peerless client experiences.
               </p>
-
-              <Link className="py-4 font-bold">Read Our Clients Stories →</Link>
             </div>
             <div className="flex flex-col space-y-6 rounded-md sm:py-6 sm:p-8 lg:p-8 lg:w-full xl:w-full text-black">
               <div className="flex space-x-2 sm:space-x-4">
