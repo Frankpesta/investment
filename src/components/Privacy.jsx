@@ -80,7 +80,7 @@ const Privacy = () => {
 
           <ul className="text-lg leading-relaxed pb-6 list-disc">
               <li className="py-2">to help you understand our business, its performance and changes;</li>
-              <li className="py-2">to keep you informed about news and events, including regulatory news connected with Dex Finance Management;</li>
+              <li className="py-2">to keep you informed about news and events, including regulatory news connected with WealthBridgeAdvisors Management;</li>
               <li className="py-2">to assess and evaluate any content you submit to us and to decide on next steps in relation to your submission;</li>
               <li className="py-2">to administer and keep up to date your account, resolve problems and respond to complaints;</li>
               <li className="py-2">to prevent and detect fraud;</li>
@@ -99,7 +99,7 @@ const Privacy = () => {
               <li className="py-2">If the law or a public or regulatory authority says we must share the personal data;</li>
               <li className="py-2">If we need to share personal data in order to establish, exercise or defend our legal rights (this includes providing personal data to others for the purposes of preventing fraud);</li>
               <li className="py-2">Where we restructure, sell or transfer our business (or a part of it). For example in connection with a takeover or merger.</li>
-              <li className="py-2">With other companies in the Dex Finance Management Group and third parties who help us assess and evaluate any content or ideas you share with us.</li>
+              <li className="py-2">With other companies in the WealthBridgeAdvisors Management Group and third parties who help us assess and evaluate any content or ideas you share with us.</li>
           </ul>
       </div>
 
