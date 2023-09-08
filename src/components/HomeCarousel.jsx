@@ -2,9 +2,9 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import CarouselItem from "./CarouselItem";
-import Cover1 from "../assets/cover1.png";
-import Cover2 from "../assets/cover2.png";
-import Cover3 from "../assets/cover3.png";
+import Cover1 from "../assets/cover1.jpg";
+import Cover2 from "../assets/cover2.jpg";
+import Cover3 from "../assets/cover3.jpg";
 
 const HomeCarousel = () => {
   return (
@@ -12,20 +12,20 @@ const HomeCarousel = () => {
     <Carousel className="w-full overflow-hidden mb-4 flex flex-col items-center justify-start" autoPlay infiniteLoop showArrows={false} showStatus={false}>
       <div>
         <CarouselItem
-        header='You Grow, We Grow'
-        subText='With Consistency, Success will follow'
+        header='Unleash Your Wealth Potential'
+        subText='Elevate your investments with Wealthbridge guidance'
         image={Cover1} />
       </div>
       <div>
         <CarouselItem
-        header={`Don't Wait, Create Opportunity!`}
-        subText='Start by investing with us today'
+        header={`Navigate to Financial Success`}
+        subText='Tailored strategies for your journey to prosperity.'
         image={Cover2} />
       </div>
       <div>
         <CarouselItem 
-        header='Build your Portfolio with Us'
-        subText='Advice that is always in your best interest.'
+        header='Confidence in Every Investment'
+        subText={` Invest with Wealthbridge's expertise by your side.`}
         image={Cover3} />
       </div>
     </Carousel>

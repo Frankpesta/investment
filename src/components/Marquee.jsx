@@ -24,7 +24,7 @@ const Marquee = () => {
           .catch((error) => console.log(error));
       }, []);
   return (
-    <div className='py-4'>
+    <div className='mt-[-8px]'>
     <div className="flex flex-row gap-5 relative overflow-x-hidden mt-4">
         {data.map((item) => (
           <div

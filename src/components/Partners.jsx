@@ -29,17 +29,17 @@ const Partners = () => {
       <div>
         <img className="object-contain w-full mx-auto h-25" src={logo5} alt='logo' />
       </div>
-      <div className="hidden md:block">
+      <div>
+        <img className="object-contain w-full h-30 mx-auto" src={logo8} alt='logo' />
+      </div>
+      <div className=''>
         <img className="object-contain w-full h-25 mx-auto" src={logo4} alt='logo' />
       </div>
-      <div className="hidden md:block">
+      <div className="">
         <img className="object-contain w-full h-20 mx-auto" src={logo6} alt='logo' />
       </div>
-      <div className="hidden md:block">
+      <div className="">
         <img className="object-contain w-full h-20 mx-auto" src={logo7} alt='logo' />
-      </div>
-      <div className="hidden md:block">
-        <img className="object-contain w-full h-30 mx-auto" src={logo8} alt='logo' />
       </div>
     </div>
     <p className="mt-10 text-base text-center text-gray-500 md:mt-20">and, 1000+ more companies</p>

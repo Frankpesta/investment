@@ -39,7 +39,7 @@ const Insights = () => {
               </h3>
               <p>
                 Following Fitch Ratings's downgrade of the U.S. federal
-                government’s credit score to AA+, BNY Mellon Wealth Management
+                government’s credit score to AA+, WealthBridge Advisors Wealth Management
                 dissects the market’s reaction, potential impacts on U.S.
                 Treasury bonds in the global capital markets and the prospect of
                 finding investment opportunities in the fixed-income market.
@@ -110,7 +110,7 @@ const Insights = () => {
                 liquidity, and help ensure they stay ahead of what’s next.
               </p>
             </div>
-            <div className="flex flex-col space-y-6 rounded-md sm:py-6 sm:p-8 lg:p-8 lg:w-full xl:w-full bg-green-600 text-gray-50">
+            <div className="flex flex-col space-y-6 rounded-md sm:py-6 sm:p-8 lg:p-8 lg:w-full xl:w-full bg-gray-900 text-gray-50">
               <div className="flex space-x-2 sm:space-x-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
