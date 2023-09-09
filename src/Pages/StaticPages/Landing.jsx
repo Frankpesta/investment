@@ -13,6 +13,7 @@ import HomeCarousel from '../../components/HomeCarousel';
 import Marquee from "../../components/Marquee";
 import TradingView from "../../components/TradingView";
 import Crypto from "../../components/Crypto";
+import PlanButtons from "../../components/planButtons";
 
 
 
@@ -27,7 +28,7 @@ export default function Landing() {
       <Experience />
       <Steps />
       <SuccessComponents />
-      <Plans />
+      <PlanButtons />
       <Referral />
       <Partners />
       <ChooseUs />
